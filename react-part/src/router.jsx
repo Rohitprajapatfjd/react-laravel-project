@@ -6,6 +6,7 @@ import GuestLayout from "./component/GuestLayout";
 import Login from "./view/Login";
 import SignIn from "./view/SignIn";
 import NotFound from "./view/NotFound";
+import UserForm from "./view/UserForm";
 
 const router = createBrowserRouter([
     {
@@ -23,6 +24,14 @@ const router = createBrowserRouter([
             {
                 path: "/user",
                 element: <Users />,
+            }, 
+            {
+                path: "/users/new",
+                element: <UserForm key='userCreate'/>,
+            },
+            {
+                path: "/users/:id",
+                element: <UserForm key="userUpdate" />,
             },
         ],
     },
